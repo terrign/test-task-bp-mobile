@@ -1,0 +1,50 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "unused-imports", "@stylistic", "prettier"],
+  "extends": ["prettier", "plugin:@typescript-eslint/recommended"],
+  "rules": {
+    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/no-explicit-any": "error",
+    "unused-imports/no-unused-imports": "error",
+    // "no-console": "error",
+    "@stylistic/arrow-parens": ["error", "always"],
+    "@stylistic/padding-line-between-statements": [
+      "error",
+
+      { "blankLine": "always", "prev": "*", "next": "block-like" },
+      { "blankLine": "always", "prev": "block-like", "next": "*" },
+
+      { "blankLine": "always", "prev": "*", "next": "multiline-expression" },
+      { "blankLine": "always", "prev": "multiline-expression", "next": "*" },
+
+      { "blankLine": "always", "prev": "*", "next": "multiline-const" },
+      { "blankLine": "always", "prev": "multiline-const", "next": "*" },
+
+      { "blankLine": "always", "prev": "*", "next": "return" },
+      { "blankLine": "always", "prev": "*", "next": "export" },
+
+      { "blankLine": "always", "prev": "import", "next": "*" },
+      { "blankLine": "any", "prev": "import", "next": "import" }
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [["@", "./src"]]
+      }
+    }
+  },
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "sourceType": "module"
+  },
+  "ignorePatterns": [
+    "/*.css",
+    "*.eslintrc.js",
+    "*.config.js",
+    "*.config.ts",
+    "*.config.cjs",
+    "dist",
+    "src/global.d.ts"
+  ]
+}
