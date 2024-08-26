@@ -1,0 +1,31 @@
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+  font-weight: var(--font-weight-normal);
+  letter-spacing: 0.5px;
+}
+
+.list {
+  width: 75%;
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  color: var(--white-50);
+  white-space: nowrap;
+}
+
+html[lang='fr'] .list {
+  font-size: 10px;
+  letter-spacing: 0.1px;
+}
+
+html[lang='de'] .list {
+  font-size: 10px;
+  letter-spacing: 0.1px;
+}

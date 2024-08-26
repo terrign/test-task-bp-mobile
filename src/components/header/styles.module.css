@@ -1,0 +1,33 @@
+.header {
+  margin-bottom: auto;
+}
+
+.close-button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 12px;
+  width: 12px;
+  padding: 2px;
+}
+
+.close-icon,
+.close-icon:after {
+  position: absolute;
+  display: block;
+  height: 2px;
+  width: 17px;
+  border-radius: 1px;
+  background-color: var(--white);
+}
+
+.close-icon {
+  transform: rotate(45deg);
+  opacity: 0.4;
+}
+
+.close-icon:after {
+  content: ' ';
+  transform: rotate(-90deg);
+}

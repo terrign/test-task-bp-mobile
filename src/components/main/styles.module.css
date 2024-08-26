@@ -1,0 +1,17 @@
+.main-heading {
+  text-align: center;
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-xl);
+  font-weight: var(--font-weight-extra-bold);
+  margin-bottom: 40px;
+}
+
+.continue {
+  margin-bottom: 44px;
+  background-color: var(--white);
+  color: var(--dark-blue);
+
+  font-size: var(--font-size-l);
+  line-height: var(--line-height-l);
+  font-weight: var(--font-weight-semi-bold);
+}

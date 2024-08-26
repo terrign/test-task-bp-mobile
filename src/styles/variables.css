@@ -1,0 +1,37 @@
+:root {
+  --sat: env(safe-area-inset-top, 0px);
+  --sar: env(safe-area-inset-right, 0px);
+  --sab: env(safe-area-inset-bottom, 0px);
+  --sal: env(safe-area-inset-left, 0px);
+
+  --white: #fff;
+  --white-10: rgba(255, 255, 255, 0.1);
+  --white-30: rgba(255, 255, 255, 0.3);
+  --white-50: rgba(255, 255, 255, 0.5);
+  --dark-blue: rgb(7, 11, 51);
+
+  --font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  --font-size-xl: 2.1rem; /* 42px */
+  --font-size-l: 1rem; /* 20px */
+  --font-size-m: 0.8rem; /* 16px */
+  --font-size-s: 0.65rem; /* 13px */
+  --font-size-xs: 0.55rem; /* 11px */
+  --font-size-xxs: 0.5rem; /* 10px */
+
+  --line-height-xl: 2.3rem; /* 46px */
+  --line-height-l: 1.2rem; /* 24px */
+  --line-height-m: 0.95rem; /* 19px */
+  --line-height-s: 0.75rem; /* 15px */
+  --line-height-xs: 0.65rem; /* 13px */
+  --line-height-xxs: 0.6rem; /* 12px */
+
+  --font-weight-extra-bold: 900;
+  --font-weight-bold: 700;
+  --font-weight-semi-bold: 600;
+  --font-weight-normal: 400;
+
+  --content-padding: 24px;
+  --border-radius: 28px;
+}

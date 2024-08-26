@@ -1,0 +1,22 @@
+.wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-sizing: border-box;
+
+  padding-top: calc(var(--sat) + var(--content-padding));
+  padding-right: calc(var(--sar) + var(--content-padding));
+  padding-bottom: max(var(--sab), 18px);
+  padding-left: calc(var(--sal) + var(--content-padding));
+
+  background-image: image-set(
+    url('./assets/images/bg_6:19.5.png?as=webp') 1x,
+    url('./assets/images/bg_6:19.5@2x.png?as=webp') 2x,
+    url('./assets/images/bg_6:19.5@3x.png?as=webp') 3x
+  );
+  background-color: var(--dark-blue);
+  background-size: cover;
+  background-repeat: no-repeat;
+}

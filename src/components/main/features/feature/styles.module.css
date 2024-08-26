@@ -1,0 +1,42 @@
+.feature {
+  position: relative;
+  height: 140px;
+  width: 105px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.picture {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+.content {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.0001) 0%,
+    rgba(4, 6, 26, 0.0001) 62.04%,
+    rgba(6, 9, 37, 0.558287) 76.68%,
+    rgb(6, 9, 37) 100%
+  );
+
+  position: absolute;
+  display: flex;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+}
+
+.text {
+  width: 100%;
+  margin-top: auto;
+  padding: 0px 7px 11px;
+  box-sizing: border-box;
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+  font-weight: var(--font-weight-normal);
+  text-align: left;
+}

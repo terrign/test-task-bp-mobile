@@ -1,0 +1,52 @@
+.selector {
+  position: relative;
+  background-color: var(--white-10);
+  font-size: var(--font-size-m);
+  line-height: var(--line-height-m);
+}
+
+.title {
+  font-weight: var(--font-weight-semi-bold);
+}
+
+.annual-price,
+.per-week-price {
+  font-weight: var(--font-weight-normal);
+  opacity: 0.7;
+}
+
+.selector:nth-child(2) {
+  margin-top: 8px;
+}
+
+.selector-active {
+  background-color: var(--white-30);
+  border: 1px solid var(--white);
+}
+
+.wrapper {
+  text-align: left;
+  flex: 1 0 53%;
+}
+
+.best-offer {
+  position: absolute;
+  white-space: nowrap;
+  height: 20px;
+  top: -12px;
+  right: var(--content-padding);
+  background-color: var(--white);
+  margin-left: auto;
+  box-sizing: border-box;
+  border-radius: 28px;
+  padding: 2px var(--content-padding);
+
+  color: var(--dark-blue);
+  font-size: var(--font-size-s);
+  line-height: var(--line-height-s);
+  font-weight: var(--font-weight-bold);
+}
+
+.per-week-price {
+  flex: 1 1 auto;
+}

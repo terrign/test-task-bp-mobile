@@ -1,12 +1,12 @@
 {
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint", "unused-imports", "@stylistic", "prettier"],
+  "plugins": ["@typescript-eslint", "unused-imports", "prettier", "@stylistic"],
   "extends": ["prettier", "plugin:@typescript-eslint/recommended"],
   "rules": {
     "@typescript-eslint/no-unused-vars": "error",
     "@typescript-eslint/no-explicit-any": "error",
     "unused-imports/no-unused-imports": "error",
-    // "no-console": "error",
+    "no-console": "error",
     "@stylistic/arrow-parens": ["error", "always"],
     "@stylistic/padding-line-between-statements": [
       "error",
@@ -24,7 +24,8 @@
       { "blankLine": "always", "prev": "*", "next": "export" },
 
       { "blankLine": "always", "prev": "import", "next": "*" },
-      { "blankLine": "any", "prev": "import", "next": "import" }
+      { "blankLine": "any", "prev": "import", "next": "import" },
+      { "blankLine": "never", "prev": "function", "next": "function" }
     ]
   },
   "settings": {
