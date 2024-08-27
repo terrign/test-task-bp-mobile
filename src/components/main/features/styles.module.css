@@ -3,4 +3,12 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 50px;
+
+  @media (max-height: 736px) {
+    margin-bottom: 40px;
+  }
+
+  @media (max-height: 547px) {
+    margin-bottom: 28px;
+  }
 }

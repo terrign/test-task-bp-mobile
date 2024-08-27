@@ -1,6 +1,8 @@
 .wrapper {
   height: 100%;
   width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -8,15 +10,23 @@
 
   padding-top: calc(var(--sat) + var(--content-padding));
   padding-right: calc(var(--sar) + var(--content-padding));
-  padding-bottom: max(var(--sab), 18px);
+  padding-bottom: max(var(--sab), 10px);
   padding-left: calc(var(--sal) + var(--content-padding));
 
   background-image: image-set(
-    url('./assets/images/bg_6:19.5.png?as=webp') 1x,
-    url('./assets/images/bg_6:19.5@2x.png?as=webp') 2x,
-    url('./assets/images/bg_6:19.5@3x.png?as=webp') 3x
+    url('./assets/images/bg_9:19.5@2x.png?as=webp') 2x,
+    url('./assets/images/bg_9:19.5@3x.png?as=webp') 3x
   );
+
   background-color: var(--dark-blue);
   background-size: cover;
   background-repeat: no-repeat;
+
+  /* iphones with lower height have 9:16 resulution*/
+  @media (max-height: 736px) {
+    background-image: image-set(
+      url('./assets/images/bg_9:16@2x.png?as=webp') 2x,
+      url('./assets/images/bg_9:16@3x.png?as=webp') 3x
+    );
+  }
 }

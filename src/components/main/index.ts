@@ -13,13 +13,13 @@ const Main = () => {
   });
 
   const Continue = LinkButton({
- href: '#',
-text: t(TranslateKey.Continue) 
-});
+    href: '#',
+    text: t(TranslateKey.Continue),
+  });
 
   Continue.classList.add(styles.continue);
 
-  return create('main', {}, Heading, Features(), Selectors(), Continue);
+  return create('main', { className: styles.main }, Heading, Features(), Selectors(), Continue);
 };
 
 export { Main };

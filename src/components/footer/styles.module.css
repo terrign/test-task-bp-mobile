@@ -20,12 +20,7 @@
   white-space: nowrap;
 }
 
-html[lang='fr'] .list {
-  font-size: 10px;
-  letter-spacing: 0.1px;
-}
-
+html[lang='fr'] .list,
 html[lang='de'] .list {
-  font-size: 10px;
   letter-spacing: 0.1px;
 }

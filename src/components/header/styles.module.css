@@ -1,5 +1,6 @@
 .header {
-  margin-bottom: auto;
+  position: sticky;
+  top: var(--content-padding);
 }
 
 .close-button {

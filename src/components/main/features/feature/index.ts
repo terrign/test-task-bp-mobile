@@ -18,6 +18,7 @@ const Feature = ({ textContent, sourceSrcSet, fallbackSrcSet }: TFeature) => {
     alt: textContent,
     height: 140,
     width: 105,
+    className: styles.image,
   });
 
   const Picture = create('picture', { className: styles.picture }, Source, Image);

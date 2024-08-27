@@ -1,3 +1,7 @@
 .selectors {
   margin-bottom: 16px;
+
+  @media (max-height: 736px) {
+    margin-bottom: 8px;
+  }
 }

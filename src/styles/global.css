@@ -4,6 +4,10 @@ body {
   height: 100%;
 }
 
+html[data-full-screen='true'] {
+  height: 100vh;
+}
+
 body {
   background-color: var(--dark-blue);
 }
@@ -19,7 +23,6 @@ p {
 
 html {
   font-family: var(--font-family);
-  font-size: 20px;
   color: var(--white);
 }
 
@@ -32,3 +35,17 @@ li {
   display: block;
   list-style: none;
 }
+
+/* html:root[lang='de'] {
+  font-size: 18px;
+  @media (max-height: 736px) {
+    font-size: 16px;
+  }
+}
+
+html:root[lang='fr'] {
+  font-size: 18px;
+  @media (max-height: 736px) {
+    font-size: 16px;
+  }
+} */

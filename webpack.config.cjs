@@ -15,9 +15,8 @@ const config = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     // publicPath: './',
-    assetModuleFilename: 'assets/images/[contenthash]_[name][ext]',
-    filename: '[contenthash]_app.js',
-    chunkFilename: '[id]_chunk.js',
+    assetModuleFilename: 'assets/images/[name]_[contenthash][ext]',
+    filename: 'app_[contenthash].js',
   },
   optimization: {
     minimize: true,
@@ -67,7 +66,6 @@ const config = {
       }),
     ],
   },
-  // devtool: 'source-map',
   devServer: {
     liveReload: true,
     open: true,
@@ -87,7 +85,7 @@ const config = {
     }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
-      filename: `[contenthash].css`,
+      filename: 'styles_[contenthash].css',
     }),
   ],
   module: {
@@ -103,7 +101,7 @@ const config = {
         use: [stylesHandler, 'css-loader', 'postcss-loader'],
       },
       {
-        test: /\.(png|webp)$/i,
+        test: /\.(png)$/i,
         type: 'asset/resource',
       },
       {
@@ -115,6 +113,7 @@ const config = {
             options: {
               modules: {
                 exportLocalsConvention: 'camel-case-only',
+                localIdentName: '[local]_[hash:base64:5]',
               },
               esModule: false,
             },

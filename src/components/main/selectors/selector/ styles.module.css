@@ -32,6 +32,8 @@
 .best-offer {
   position: absolute;
   white-space: nowrap;
+  display: flex;
+  align-items: center;
   height: 20px;
   top: -12px;
   right: var(--content-padding);

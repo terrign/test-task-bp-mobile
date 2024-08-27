@@ -6,6 +6,10 @@
   margin-bottom: 40px;
 }
 
+.main {
+  margin-top: auto;
+}
+
 .continue {
   margin-bottom: 44px;
   background-color: var(--white);
@@ -14,4 +18,19 @@
   font-size: var(--font-size-l);
   line-height: var(--line-height-l);
   font-weight: var(--font-weight-semi-bold);
+
+  @media (max-height: 736px) {
+    margin-bottom: 28px;
+  }
+}
+
+@media (max-height: 547px) {
+  .main-heading {
+    margin-bottom: 16px;
+    font-size: 1.9rem;
+    line-height: 2rem;
+  }
+  .continue {
+    margin-bottom: 16px;
+  }
 }
