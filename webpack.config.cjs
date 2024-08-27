@@ -82,6 +82,7 @@ const config = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
+      favicon: path.resolve(__dirname, './src/assets/favicon.ico'),
     }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
