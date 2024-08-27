@@ -27,7 +27,7 @@
 @media (max-height: 547px) {
   .main-heading {
     margin-bottom: 16px;
-    font-size: 1.9rem;
+    font-size: calc(var(--font-size-xl) * 0.95);
     line-height: 2rem;
   }
   .continue {

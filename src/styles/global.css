@@ -35,17 +35,3 @@ li {
   display: block;
   list-style: none;
 }
-
-/* html:root[lang='de'] {
-  font-size: 18px;
-  @media (max-height: 736px) {
-    font-size: 16px;
-  }
-}
-
-html:root[lang='fr'] {
-  font-size: 18px;
-  @media (max-height: 736px) {
-    font-size: 16px;
-  }
-} */
