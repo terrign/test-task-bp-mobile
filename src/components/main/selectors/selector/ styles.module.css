@@ -15,9 +15,8 @@
   opacity: 0.7;
 }
 
-:root[lang='pt'] .annual-price,
-:root[lang='fr'] .annual-price {
-  font-size: calc(var(--font-size-m) * 0.95);
+:root[lang='pt'] .annual-price {
+  font-size: calc(var(--font-size-m) * 0.9);
 }
 
 .selector:nth-child(2) {
