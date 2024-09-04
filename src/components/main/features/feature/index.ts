@@ -14,7 +14,6 @@ const Feature = ({ textContent, sourceSrcSet, fallbackSrcSet }: TFeature) => {
   });
 
   const Image = create('img', {
-    srcset: fallbackSrcSet,
     alt: textContent,
     height: 140,
     width: 105,
@@ -22,6 +21,9 @@ const Feature = ({ textContent, sourceSrcSet, fallbackSrcSet }: TFeature) => {
   });
 
   const Picture = create('picture', { className: styles.picture }, Source, Image);
+
+  //see https://github.com/facebook/react/issues/22684
+  Image.srcset = fallbackSrcSet;
 
   const Text = create('p', {
     className: styles.text,

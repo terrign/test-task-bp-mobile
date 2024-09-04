@@ -21,7 +21,7 @@ import feature_3_x2_jpg from '@/assets/images/f3@2x.png?as=jpg';
 import feature_3_x3_jpg from '@/assets/images/f3@3x.png?as=jpg';
 import { t } from '@/scripts/localize';
 
-const createSrcSet = ({ x2, x3 }: TSrcSet) => ` ${x2} 2x, ${x3}, 3x`;
+const createSrcSet = ({ x2, x3 }: TSrcSet) => `${x2} 2x, ${x3} 3x`;
 
 const config: TFeature[] = [
   {
