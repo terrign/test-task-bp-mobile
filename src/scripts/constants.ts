@@ -25,6 +25,4 @@ enum ELocale {
 
 const DEFAULT_LOCALE = ELocale.EN;
 
-export {
- TranslateKey, DEFAULT_LOCALE, ELocale 
-};
+export { TranslateKey, DEFAULT_LOCALE, ELocale };

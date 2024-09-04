@@ -22,7 +22,8 @@
   background-size: cover;
   background-repeat: no-repeat;
 
-  @media (max-height: 736px) {
+  @media (max-height: 736px) and (max-width: 414px) {
+    padding-top: calc(var(--sat) + 12px);
     background-image: image-set(
       url('./assets/images/bg_9:16@2x.png?as=jpg') 2x,
       url('./assets/images/bg_9:16@3x.png?as=jpg') 3x
@@ -40,7 +41,7 @@
       url('./assets/images/bg_9:19.5@3x.png?as=webp') 3x
     );
 
-    @media (max-height: 736px) {
+    @media (max-height: 736px) and (max-width: 414px) {
       background-image: image-set(
         url('./assets/images/bg_9:16@2x.png?as=webp') 2x,
         url('./assets/images/bg_9:16@3x.png?as=webp') 3x

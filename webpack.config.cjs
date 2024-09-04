@@ -27,8 +27,8 @@ const config = {
           options: {
             lossless: true,
             encodeOptions: {
-              webp: { quality: 90 },
-              jpg: { quality: 90 },
+              webp: { quality: 80 },
+              jpg: { quality: 80 },
             },
           },
         },
@@ -39,7 +39,7 @@ const config = {
             options: {
               lossless: true,
               encodeOptions: {
-                webp: { quality: 90 },
+                webp: { quality: 80 },
               },
             },
           },
@@ -49,7 +49,7 @@ const config = {
             options: {
               lossless: true,
               encodeOptions: {
-                jpg: { quality: 90 },
+                jpg: { quality: 80 },
               },
             },
           },

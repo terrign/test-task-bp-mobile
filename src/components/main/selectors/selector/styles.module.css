@@ -25,6 +25,10 @@ div.selector-active {
   font-size: calc(var(--font-size-m) * 0.9);
 }
 
+:root[lang='fr'] .annual-price {
+  font-size: calc(var(--font-size-m) * 0.9);
+}
+
 .selector:nth-child(2) {
   margin-top: 8px;
 }
@@ -32,6 +36,7 @@ div.selector-active {
 .wrapper {
   text-align: left;
   flex: 1 0 53%;
+  padding-right: 10px;
 }
 
 .best-offer {
@@ -55,5 +60,5 @@ div.selector-active {
 }
 
 .per-week-price {
-  flex: 1 1 auto;
+  flex: 1 0 auto;
 }
