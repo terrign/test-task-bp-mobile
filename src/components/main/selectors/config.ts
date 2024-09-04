@@ -10,13 +10,14 @@ const config: TSelector[] = [
     pricePerWeek: t(TranslateKey.PricePerWeek, { price: '$0.48' }),
     bestOffer: t(TranslateKey.BestOffer),
     href: 'https://apple.com/',
+    defaultActive: true,
   },
   {
     title: t(TranslateKey.WeekSelectorTitle),
     annualPrice: null,
     pricePerWeek: t(TranslateKey.PricePerWeek, { price: '$6.99' }),
     bestOffer: null,
-    href: 'https://google.com/ ',
+    href: 'https://google.com/',
   },
 ];
 

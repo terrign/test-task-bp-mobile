@@ -1,10 +1,12 @@
 import { Features } from './features';
 import { TranslateKey } from '@/scripts/constants';
-import styles from './styles.module.css';
 import { t } from '@/scripts/localize';
-import { LinkButton } from '@/components/main/linkButton';
 import { Selectors } from '@/components/main/selectors';
 import { create } from '@/utils';
+import { config } from '@/components/main/selectors/config';
+import styles from './styles.module.css';
+
+const continueId = 'continue';
 
 const Main = () => {
   const Heading = create('h1', {
@@ -12,14 +14,16 @@ const Main = () => {
     innerHTML: t(TranslateKey.MainHeading),
   });
 
-  const Continue = LinkButton({
-    href: '#',
-    text: t(TranslateKey.Continue),
+  const Continue = create('a', {
+    className: `${styles.button} ${styles.continue}`,
+    innerHTML: t(TranslateKey.Continue),
+    id: continueId,
+    href: config.find((selector) => selector.defaultActive)?.href,
   });
-
-  Continue.classList.add(styles.continue);
 
   return create('main', { className: styles.main }, Heading, Features(), Selectors(), Continue);
 };
 
-export { Main };
+const getContinueButton = () => document.querySelector(`#${continueId}`) as HTMLAnchorElement;
+
+export { Main, getContinueButton };

@@ -1,6 +1,7 @@
 import { create } from '@/utils';
-import styles from './ styles.module.css';
-import { LinkButton } from '@/components/main/linkButton';
+import { getContinueButton } from '@/components/main';
+import styles from './styles.module.css';
+import mainStyles from '@/components/main/styles.module.css';
 
 type TSelector = {
   title: string;
@@ -8,11 +9,36 @@ type TSelector = {
   annualPrice: string | null;
   bestOffer: string | null;
   href: string;
+  defaultActive?: boolean;
 };
 
-const Selector = ({ title, pricePerWeek, annualPrice, bestOffer, href }: TSelector) => {
-  const elem = LinkButton({ href });
-  elem.classList.add(styles.selector);
+const Selector = ({
+  title,
+  pricePerWeek,
+  annualPrice,
+  bestOffer,
+  href,
+  defaultActive,
+}: TSelector) => {
+  const elem = create('div', {
+    className: `${styles.selector} ${mainStyles.button} ${defaultActive ? styles.selectorActive : ''}`,
+  });
+
+  const clickHandler = (e: MouseEvent) => {
+    const target = e.currentTarget as HTMLButtonElement;
+
+    if (target.classList.contains(styles.selectorActive)) {
+      return;
+    }
+
+    document.querySelectorAll(`.${styles.selector}`).forEach((it) => {
+      it.classList.toggle(styles.selectorActive);
+    });
+
+    getContinueButton().href = href;
+  };
+
+  elem.addEventListener('click', clickHandler);
 
   const Title = create('p', {
     className: styles.title,
@@ -37,8 +63,6 @@ const Selector = ({ title, pricePerWeek, annualPrice, bestOffer, href }: TSelect
 
   if (bestOffer) {
     const BestOffer = create('span', { className: styles.bestOffer, innerHTML: bestOffer });
-
-    elem.classList.add(styles.selectorActive);
     elem.appendChild(BestOffer);
   }
 

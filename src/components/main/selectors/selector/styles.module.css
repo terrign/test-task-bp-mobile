@@ -1,8 +1,9 @@
 .selector {
   position: relative;
-  background-color: var(--white-10);
+  background: var(--white-10);
   font-size: var(--font-size-m);
   line-height: var(--line-height-m);
+  color: var(--white);
 }
 
 .title {
@@ -12,7 +13,12 @@
 .annual-price,
 .per-week-price {
   font-weight: var(--font-weight-normal);
-  opacity: 0.7;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+div.selector-active {
+  background: var(--white-30);
+  border: 1px solid var(--white);
 }
 
 :root[lang='pt'] .annual-price {
@@ -21,11 +27,6 @@
 
 .selector:nth-child(2) {
   margin-top: 8px;
-}
-
-.selector-active {
-  background-color: var(--white-30);
-  border: 1px solid var(--white);
 }
 
 .wrapper {

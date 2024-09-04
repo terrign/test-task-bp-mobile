@@ -10,6 +10,18 @@
   margin-top: auto;
 }
 
+.button {
+  box-sizing: border-box;
+  width: 100%;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px var(--content-padding);
+  border-radius: 28px;
+  border: 1px solid transparent;
+}
+
 .continue {
   margin-bottom: 44px;
   background-color: var(--white);
